@@ -69,6 +69,11 @@ We can update the board as long as we don't loose the original cell value `board
 So how can we do that. How can we update the board's cell value, while at the same time 
 we should be able to figure out what was the original value at `board[row][column]`
 
+If the state change happens because of first case, we will set the board's cell value to -1. 
+So when we see a cell value of -1 we know that this cell was initially alive but later died.
+
+If the state change happens because of second case, we will set the board's cell value to 2. 
+So when we see a cell value of 2 we know that this cell was initially dead but later became alive.
 ```
 
 ```java
