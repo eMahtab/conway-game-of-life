@@ -1,5 +1,10 @@
 # Game of life
+## https://leetcode.com/problems/game-of-life
 
+## Approach :
+
+
+## Implementation : Time => O(rows * cols) , Space => O(rows * cols)
 
 ```java
 class Solution {
@@ -49,3 +54,7 @@ class Solution {
     }
 }
 ```
+
+#References :
+1. https://leetcode.com/articles/game-of-life
+2. https://www.youtube.com/watch?v=sUqYZvfZ9UE
