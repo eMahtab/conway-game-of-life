@@ -57,6 +57,6 @@ class Solution {
 }
 ```
 
-#References :
+## References :
 1. https://leetcode.com/articles/game-of-life
 2. https://www.youtube.com/watch?v=sUqYZvfZ9UE
