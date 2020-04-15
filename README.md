@@ -74,6 +74,8 @@ So when we see a cell value of -1 we know that this cell was initially alive but
 
 If the state change happens because of second case, we will set the board's cell value to 2. 
 So when we see a cell value of 2 we know that this cell was initially dead but later became alive.
+
+And lastly we update the cell values so that -1 becomes 0 and 2 becomes 1.
 ```
 
 ```java
