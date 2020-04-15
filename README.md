@@ -6,7 +6,7 @@ We can easily solve the problem once we understand the problem, basically we hav
 
 One way to solve this problem would be to simply create a copy of the 2D board, so that we never loose track of the original cell values, and we will be updating the cell values in the original given board, but we will be applying the rules on the clone board's values.
 
-## Implementation : Time => O(rows * cols) , Space => O(rows * cols)
+## Implementation 1 : Time => O(rows * cols) , Space => O(rows * cols)
 
 ```java
 class Solution {
@@ -57,6 +57,18 @@ class Solution {
 }
 ```
 ## Implementation 2 : Time => O(rows * cols) , Space => O(1)
+Can we do it without making a copy of the original board, lets think about it. Why we needed to copy the original board, because we didn't wanted to loose the original cell values as we update the values in the original board.
+
+Can we do it without copying the original board, the answer is yes.
+```
+The state change happens only in two cases :
+1. A live cell dies because of under-population or over-population, so state changes from 1 to 0 (1 -> 0)
+2. A dead cell becomes alive, if it have exactly three live neighbors, so stage changes from 0 to 1 (0 -> 1)
+
+We can update the board as long as we don't loose the original cell value `board[row][column]`. So how can we do that. How can we update the board's cell value, while at the same time we should be able to figure out what was the original value at `board[row][column]`
+
+```
+
 ```java
 class Solution {
     final static int[][] directions = { {0,1}, {0,-1}, {1,0}, {-1,0}, {-1,1}, {1,1}, {-1,-1}, {1, -1}};
