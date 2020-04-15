@@ -2,7 +2,9 @@
 ## https://leetcode.com/problems/game-of-life
 
 ## Approach :
+We can easily solve the problem once we understand the problem, basically we have to update the given board's cell values according to the 4 rules of game of life. One important thing to note is, we always have to consider the original board's values, while updating a cell's value.
 
+One way to solve this problem would be to simply create a copy of the 2D board, so that we never loose track of the original cell values, and we will be updating the cell values in the original given board, but we will be applying the rules on the clone board's values.
 
 ## Implementation : Time => O(rows * cols) , Space => O(rows * cols)
 
