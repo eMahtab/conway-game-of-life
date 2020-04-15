@@ -65,7 +65,9 @@ The state change happens only in two cases :
 1. A live cell dies because of under-population or over-population, so state changes from 1 to 0 (1 -> 0)
 2. A dead cell becomes alive, if it have exactly three live neighbors, so stage changes from 0 to 1 (0 -> 1)
 
-We can update the board as long as we don't loose the original cell value `board[row][column]`. So how can we do that. How can we update the board's cell value, while at the same time we should be able to figure out what was the original value at `board[row][column]`
+We can update the board as long as we don't loose the original cell value `board[row][column]`. 
+So how can we do that. How can we update the board's cell value, while at the same time 
+we should be able to figure out what was the original value at `board[row][column]`
 
 ```
 
